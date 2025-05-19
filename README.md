@@ -114,7 +114,7 @@ curl -X DELETE http://localhost:3000/provers/1
 ---
 ##  Deployed API (Render)
 
-🔗 https://Afghan-proverbs-App.up.railway.app
+🔗https://afghan-proverbs-app-1.onrender.com
 
 ---
 ## Tech Stack
