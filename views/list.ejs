@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>لیست ضرب‌المثل‌ها</title>
+</head>
+<body>
+  <div class="body-list">
+    <% if (proverbs.length === 0) { %>
+      <p style="color: red; text-align: center;">هیچ ضرب‌المثلی پیدا نشد! 😢</p>
+    <% } else { %>
+      <% proverbs.forEach(proverb => { %>
+        <div class="boxs">
+          <p><strong>کتگوری :</strong> <%= proverb.category %></p>
+          <p><strong>فارسی :</strong> <%= proverb.textDari %></p>
+          <p><strong>پشتو :</strong> <%= proverb.textPashto %></p>
+          <p><strong>انگلیسی :</strong> <%= proverb.translationEn %></p>
+
+          <a href="/proverbs/<%= proverb.id %>/edit"><button>ویرایش</button></a>
+          <form action="/proverbs/<%= proverb.id %>?_method=DELETE" method="POST" onsubmit="return confirm('آیا از حذف این ضرب‌المثل مطمئن هستید؟');" style="display:inline;">
+            <button type="submit">حذف</button>
+          </form>
+        </div>
+      <% }) %>
+    <% } %>
+
+    <a class="btn" href="/">رفتن به صفحه اصلی</a>
+  </div>
+</body>
+</html>

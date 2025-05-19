@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <title>فیلتر</title>
+</head>
+<body>
+  <h2 style="color: white;">لیست ضرب‌المثل‌ها</h2>
+
+  <div class="body-list">
+    <% if (message) { %>
+      <p><%= message %></p>
+    <% } else { %>
+      <ul>
+        <% proverbs.forEach(p => { %>
+        <div class="boxs">
+          <li>
+            <strong>دری:</strong> <%= p.textDari %><br>
+            <strong>پشتو:</strong> <%= p.textPashto %><br>
+            <strong>انگلیسی:</strong> <%= p.translationEn %><br>
+            <strong>کتگوری:</strong> <%= p.category %><br>
+            <strong>معنی:</strong> <%= p.meaning %>
+          </li>
+        </div>
+          
+          <hr>
+        <% }) %>
+      </ul>
+    <% } %>
+  </div>
+  <a class="btn" href="/">رفتن به صفحه اصلی</a>
+</body>
+</html>

@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <title>ضرب‌المثل تصادفی</title>
+</head>
+<body>
+  <h2 style="color: white;">ضرب‌المثل تصادفی</h2>
+  <% if (message) { %>
+    <p><%= message %></p>
+  <% } else { %>
+  <div class="boxs">
+   
+      <p><strong>دری:</strong> <%= proverb.textDari %></p>
+      <p><strong>پشتو:</strong> <%= proverb.textPashto %></p>
+      <p><strong>انگلیسی:</strong> <%= proverb.translationEn %></p>
+      <p><strong>کتگوری:</strong> <%= proverb.category %></p>
+      <p><strong>معنی:</strong> <%= proverb.meaning %></p>
+  </div>
+
+<% } %>
+<a class="btn" href="/">رفتن به صفحه اصلی</a>
+
+</body>
+</html>

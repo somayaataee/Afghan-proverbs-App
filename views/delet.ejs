@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>حذف ضرب‌المثل</title>
+</head>
+<body>
+  <form action="/proverbs/<%= proverb.id %>?_method=DELETE" method="POST">
+    <p>آیا مطمئن هستید که می‌خواهید این ضرب‌المثل را حذف کنید؟</p>
+    <button type="submit">بله، حذف شود</button>
+    <a href="/proverbs"><button type="button">لغو</button></a>
+  </form>
+  <a class="btn" href="/">رفتن به صفحه اصلی</a>
+
+</body>
+</html>
