@@ -1,0 +1,1 @@
+# Afghan-proverbs-App
